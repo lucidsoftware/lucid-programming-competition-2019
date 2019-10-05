@@ -8,6 +8,7 @@ If there is an *even* number of broomsticks, you must once again line each of th
 Your job is to devise a magical algorithm, which, when given the length of a new broomstick being added to the school's collection, will return the length of the new _perfect_ broomstick.
 ## Input/Output
 Your input consists of a sequence of numbers, one per line, each representing the length of a new broomstick being added to the collection. After a broomstick has been added to the collection, you must output the length of the current _perfect_ broomstick as defined above.
+
 **Input**
 ```
 <broomstick_length>
