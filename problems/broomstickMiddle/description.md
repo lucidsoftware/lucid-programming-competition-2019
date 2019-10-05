@@ -24,7 +24,7 @@ Your input consists of a sequence of numbers, one per line, each representing th
 <perfect_broomstick_length>
 ```
 ## Constraints
-* The length of the broomstick will always be a positive, non-zero integer strictly less than 2^32.
+* The length of the broomstick will always be a positive, non-zero integer strictly less than 2^31.
 * Broomsticks being added to the collection may be the same length as other broomsticks already present in the school's collection.
 * For the purposes of this problem, there is no particular unit of measure for the broomstick lengths, but you may assume that all lengths given are in the same unit of measure (no trickery with conversions required).
 ## Examples
