@@ -25,7 +25,7 @@ def main():
         unique_weights.add(random.randint(-5000, 100000))
 
     for treat, weight in zip(treats, unique_weights):
-        print(f"{treat} {weight}")
+        print(f"{weight} {treat}")
 
 if __name__ == "__main__":
     main()

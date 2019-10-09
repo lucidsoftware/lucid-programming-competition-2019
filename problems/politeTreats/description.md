@@ -21,9 +21,9 @@ Output the name of the treat that has the second heaviest weight.
 ## Examples
 #### Input 0
 ```
-Doughnut Delight 26
-Bubbly Broomstick Soda 370
-Spooky Sugar Cooky 32
+26 Doughnut Delight
+370 Bubbly Broomstick Soda
+32 Spooky Sugar Cooky
 ```
 #### Output 0
 ```
@@ -31,9 +31,10 @@ Spooky Sugar Cooky
 ```
 #### Input 1
 ```
-Slice of Pumpkin Pie 160
-Undiluted-High-Fructose-Syrup 200
-5 Mummy & Ghost Cookie Bars 300
+160 Slice of Pumpkin Pie
+200 Undiluted-High-Fructose-Syrup
+300 Mummy & Ghost Cookie Bars
+-80 Cursed Cookies of Misfortune
 ```
 #### Output 1
 ```

@@ -16,7 +16,7 @@ fn main() {
             let line_vec: Vec<String> = line.split(" ")
                 .map(|l| l.to_string())
                 .collect::<Vec<String>>();
-            let (str_weight, vec_rest) = line_vec.split_last().unwrap();
+            let (str_weight, vec_rest) = line_vec.split_first().unwrap();
             let weight = str_weight.parse::<i64>().unwrap();
             let name = vec_rest.join(" ");
 

@@ -1,2 +1,2 @@
 #!/bin/bash
-$(dirname $0)/rust/target/debug/polite_treats
+$(dirname $0)/rust/target/release/polite_treats
