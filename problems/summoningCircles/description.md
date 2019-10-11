@@ -37,7 +37,7 @@ A single integer, the sum of the numbers on rune stones in the center of the cir
 <br/>
 0 ≤ K < 2<sup>5</sup>
 <br/>
-1 ≤ M < 2<sup>5</sup>
+2 ≤ M < 2<sup>5</sup>
 <br/>
 0 ≤ Q < 2<sup>5</sup>
 <br/>
@@ -45,3 +45,38 @@ A single integer, the sum of the numbers on rune stones in the center of the cir
 
 ## Examples
 
+For example, here is walkthrough of creating a summoning circle where **P=16**, **K=1**, **M=7**, **Q=3**.
+The current sum **S** is shown as we add more rune stones, and the _current_ rune stone is in parentheses.
+You'll just have to imagine them in a circle
+
+<pre>[ 1] S= 0 :   0 ( 1)
+[ 2] S= 0 :   0 ( 2)  1
+[ 3] S= 0 :   0   2   1 ( 3)
+[ 4] S= 0 :   0 ( 4)  2   1   3
+[ 5] S= 0 :   0   4   2 ( 5)  1   3
+[ 6] S= 0 :   0   4   2   5   1 ( 6)  3
+[ 7] S= 9 :   0   4 ( 5)  1   6   3
+[ 8] S= 9 :   0   4   5   1 ( 8)  6   3
+[ 9] S= 9 :   0   4   5   1   8   6 ( 9)  3
+[10] S= 9 :   0   4   5   1   8   6   9   3 (10)
+[11] S= 9 :   0 (11)  4   5   1   8   6   9   3  10
+[12] S= 9 :   0  11   4 (12)  5   1   8   6   9   3  10
+[13] S= 9 :   0  11   4  12   5 (13)  1   8   6   9   3  10
+[14] S=27 :   0  11 (12)  5  13   1   8   6   9   3  10
+[15] S=27 :   0  11  12   5 (15) 13   1   8   6   9   3  10</pre>
+
+And here is another where **P=15**, **K=2**, **M=4**, **Q=2**.
+<pre>[ 1] S= 0 :   0 ( 1)
+[ 2] S= 0 :   0   1 ( 2)
+[ 3] S= 0 :   0   1 ( 3)  2
+[ 4] S= 4 : ( 1)  3   2
+[ 5] S= 4 :   1   3   2 ( 5)
+[ 6] S= 4 :   1   3 ( 6)  2   5
+[ 7] S= 4 :   1   3   6   2   5 ( 7)
+[ 8] S=14 :   1   3   6 ( 5)  7
+[ 9] S=14 :   1 ( 9)  3   6   5   7
+[10] S=14 :   1   9   3   6 (10)  5   7
+[11] S=14 :   1   9   3   6  10   5   7 (11)
+[12] S=31 :   1   9   3   6  10 ( 7) 11
+[13] S=31 :   1 (13)  9   3   6  10   7  11
+[14] S=31 :   1  13   9   3 (14)  6  10   7  11</pre>
