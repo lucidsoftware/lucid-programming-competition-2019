@@ -1,10 +1,8 @@
 function getWinner(length, state) {
-    // console.log(`checking for winner: [${state}]`);
     let winner = -1;
     state.forEach((val, i) => {
         if (val == length) {
             winner = i;
-            // console.log(`winner found at ${i}`);
         }
     });
 
@@ -37,10 +35,6 @@ function playGameMultipleTimes(length, state, times) {
     return winnerCount.map(val => val / times);
 }
 
-function format(a) {
-    return a.map(val => val.toFixed(4));
-}
-
 const tries = 10000000;
 
 function simulateProbabilities(n, l, rolls) {
@@ -50,11 +44,9 @@ function simulateProbabilities(n, l, rolls) {
         state.push(0);
     }
 
-    // console.log(`state: [${state}]    results: [${format(playGameMultipleTimes(l, state, tries))}]`);
     console.log(playGameMultipleTimes(l, state, tries)[0].toFixed(4));
     rolls.forEach(val => {
         state[val] = state[val] + 1;
-        // console.log(`state: [${state}]    results: [${format(playGameMultipleTimes(l, state, tries))}]`);
         console.log(playGameMultipleTimes(l, state, tries)[0].toFixed(4));
     });
 }
@@ -64,14 +56,10 @@ process.stdin.on('data', d => chunks.push(d));
 
 process.stdin.on('end', () => {
     const inputs = chunks.join('').trim().split(/\s+/g);
-    // console.log(inputs);
 
     const n = +inputs[0];
     const l = +inputs[1];
     const rolls = inputs.slice(2);
-    // console.log(`n: ${n}`);
-    // console.log(`steps: ${l}`);
-    // console.log(`rolls: [${rolls}]`);
 
     simulateProbabilities(n, l, rolls);
 });

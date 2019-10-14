@@ -1,3 +1,4 @@
 #!/bin/sh
 exec node $(dirname $0)/snails.js
+# exec node $(dirname $0)/brute-force-snails.js
 # exec node $(dirname $0)/simulate-snails.js
