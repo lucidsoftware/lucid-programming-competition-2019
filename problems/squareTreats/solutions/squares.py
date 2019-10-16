@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-from __future__ import print_function
 
 message = raw_input()
 [strW, strH] = message.split('x')
@@ -20,5 +19,5 @@ while areaTaken < area99:
         h -= w
     numSquares += 1
 
-print(numSquares)
+print numSquares 
 
