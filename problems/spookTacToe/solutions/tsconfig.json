@@ -1,0 +1,6 @@
+{
+    "files": ["bfs.ts"],
+    "compilerOptions": {
+        "lib": ["dom", "es6"]
+    }
+}
