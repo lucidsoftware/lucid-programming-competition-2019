@@ -1,0 +1,3 @@
+#!/bin/bash
+cd "$(dirname "${BASH_SOURCE[0]}")"
+make -s dist/summoning.out &> /dev/null && dist/summoning.out
