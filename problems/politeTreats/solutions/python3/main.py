@@ -7,8 +7,8 @@ if __name__ == "__main__":
     for line in sys.stdin:
         weight, name = line.strip().split(" ", 1)
         treats.append((int(weight), name))
+        treats = deque(sorted(treats))
         if len(treats) >= 3:
-            treats = deque(sorted(treats))
             treats.popleft()
 
     print(treats[0][1])
