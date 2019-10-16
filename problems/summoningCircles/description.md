@@ -23,7 +23,7 @@ To verify the circle was prepared corrctly, your program should calculate the su
 
 ## Input
 
-A single line containing 4 positive integers, each separated by a single space.
+A single line containing 4 integers, each separated by a single space.
 <pre>P K M Q</pre>
 
 ## Output
