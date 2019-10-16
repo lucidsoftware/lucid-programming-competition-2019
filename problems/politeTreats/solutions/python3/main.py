@@ -10,8 +10,8 @@ if __name__ == "__main__":
     for line in sys.stdin:
         name, weight = line.strip().rsplit(" ", 1)
         treats.append((int(weight), name))
+        treats = deque(sorted(treats))  # Alas, no way to sort deques in place afaik.
         if len(treats) >= 3:
-            treats = deque(sorted(treats))  # Alas, no way to sort deques in place afaik.
             treats.popleft()
 
     print(treats[0][1])
