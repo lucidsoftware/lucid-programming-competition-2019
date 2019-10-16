@@ -1,2 +1,0 @@
-#!/bin/sh -e
-exec java -cp "/usr/share/scala/lib/scala-library.jar:$(dirname $0)" Main
