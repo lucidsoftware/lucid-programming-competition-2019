@@ -39,6 +39,12 @@ function forEachPoint(map, cb) {
         cb(Point.fromLinear(x), c);
     });
 }
+var debugging = false;
+function debugOut(str) {
+    if (debugging) {
+        console.warn(str);
+    }
+}
 /// This is the core logic of solving the puzzle.
 function deduce(other1, other2) {
     if (other1 === other2) {
@@ -89,6 +95,7 @@ function solve(lines) {
         }
     });
     var _loop_1 = function () {
+        debugOut(nextToSearch);
         var toSearch = nextToSearch;
         var usefulLoop = false;
         nextToSearch = new Set();
@@ -114,6 +121,7 @@ function solve(lines) {
             point.x > 0 && point.x < width - 1 && point.y > 0 && point.y < height - 1 && deductions.push(deduce(map[idx - height - 1], map[idx + height + 1])); // down slash
             point.x > 0 && point.x < width - 1 && point.y > 0 && point.y < height - 1 && deductions.push(deduce(map[idx - height + 1], map[idx + height - 1])); // up slash
             deductions = deductions.filter(function (a) { return a; });
+            debugOut(deductions);
             if (new Set(deductions).size > 1) {
                 // Since this is wrapped in a foreach it doesn't actually properly return, so we will just console log to corrupt the output.
                 // This doesn't happen with the given inputs though, so we don't really care.
@@ -123,7 +131,9 @@ function solve(lines) {
             if (deductions.length >= 1) {
                 usefulLoop = true;
                 empty--;
+                debugOut(idx + " is " + deductions[0]);
                 map[idx] = deductions[0];
+                nextToSearch["delete"](idx); // delete it if it already got re-added by something else.
                 point.getValidSiblings().forEach(function (p) {
                     if (map[p] === Item.Empty) {
                         nextToSearch.add(p);

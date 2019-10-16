@@ -45,6 +45,13 @@ function forEachPoint(map: Item[], cb: (p: Point, v: Item) => void) {
    })
 }
 
+let debugging = false;
+function debugOut(str: any) {
+    if (debugging) {
+        console.warn(str);
+    }
+}
+
 /// This is the core logic of solving the puzzle.
 function deduce(other1: Item, other2: Item): Item.X|Item.O|undefined {
     if (other1 === other2) {
@@ -96,6 +103,7 @@ function solve(lines: string[]): string {
         }
     });
     while (nextToSearch.size > 0) {
+        debugOut(nextToSearch);
         const toSearch = nextToSearch;
         let usefulLoop = false;
         nextToSearch = new Set<number>();
@@ -122,6 +130,7 @@ function solve(lines: string[]): string {
             point.x > 0 && point.x < width - 1 && point.y > 0 && point.y < height - 1 && deductions.push(deduce(map[idx - height + 1], map[idx + height - 1])); // up slash
 
             deductions = deductions.filter((a) => a);
+            debugOut(deductions);
 
             if (new Set(deductions).size > 1) {
                 // Since this is wrapped in a foreach it doesn't actually properly return, so we will just console log to corrupt the output.
@@ -133,7 +142,9 @@ function solve(lines: string[]): string {
             if (deductions.length >= 1) {
                 usefulLoop = true;
                 empty--;
+                debugOut(`${idx} is ${deductions[0]}`);
                 map[idx] = deductions[0];
+                nextToSearch.delete(idx); // delete it if it already got re-added by something else.
                 point.getValidSiblings().forEach(p => {
                     if (map[p] === Item.Empty) {
                         nextToSearch.add(p);
