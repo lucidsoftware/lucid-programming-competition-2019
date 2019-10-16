@@ -45,9 +45,9 @@ A single integer, the sum of the numbers on rune stones in the center of the cir
 
 ## Examples
 
-For example, here is walkthrough of creating a summoning circle where **P=16**, **K=1**, **M=7**, **Q=3**.
+For example, here is a walkthrough of creating a summoning circle where **P=16**, **K=1**, **M=7**, **Q=3**.
 The current sum **S** is shown as we add more rune stones, and the _current_ rune stone is in parentheses.
-You'll just have to imagine them in a circle
+You'll just have to imagine them in a circle.
 
 <pre>[ 1] S= 0 :   0 ( 1)
 [ 2] S= 0 :   0 ( 2)  1
