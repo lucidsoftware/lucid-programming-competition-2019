@@ -1,20 +1,58 @@
 # Add Pumpkin
 
-Let's say we have pumpkin as P, ghost as G, and
-P + P = P
-G + P = G
-P + G = G
-G + G = GP
+When two pumpkin meet, they combined to a pumpkin, when a pumpkin meet a witch, witch eat the pumpkin. But when two witch meet each other, one witch make the other witch to become a pumpkin.\
+Lets say pumpkin as P, Witch as W.\
+\
+P + P = P\
+W + P = W\
+P + W = W\
+W + W = WP\
+\
+When we have two list of pumpkins and witches, we need to add them together based on the roles, It will be looks like adding two numbers start from the right side.
 
-Given two strings with only P and G, return their sum (also a string with P and G).
-The input strings are both non-empty and contains only characters P or G.
+Create a program that when given two list of pumpkins and witches, returns the result of add them together.
 
-# Example 1
+## Input
 
-**Input**: a = "GG", b = "G"
-**Output**: "GPP"
+Two pumpkin and witch strings, separated by space.
 
-# Example 2
+## Output
 
-**Input**: a = "GPGP", b = "GPGG"
-**Output**: "GPGPG"
+The sum result of giving input.
+
+## Constraints
+
+The input strings are both non-empty and contains only characters P or W.
+
+## Examples
+
+<table>
+    <tr>
+        <th width="50%">Input 1</th>
+        <th>Input 2</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+WW W
+            </pre>
+        </td>
+        <td>
+            <pre>
+WPWP WPWW
+            </pre>
+        </td>
+    </tr>
+    <tr>
+        <th>Output 1</th>
+        <th>Output 2</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>WPP</pre>
+        </td>
+        <td>
+            <pre>WPWPW</pre>
+        </td>
+    </tr>
+</table>
