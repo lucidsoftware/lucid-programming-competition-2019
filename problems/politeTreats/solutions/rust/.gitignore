@@ -4,3 +4,6 @@ target/rls
 target/debug/.fingerprint
 target/debug/incremental
 target/debug/deps
+target/release/.fingerprint
+target/release/incremental
+target/releases/deps
