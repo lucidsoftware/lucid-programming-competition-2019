@@ -42,10 +42,10 @@ function calculateProbability(n, l, rolls) {
         state.push(0);
     }
 
-    console.log(getOdds(l, state)[0]);
+    console.log(getOdds(l, state)[0].toFixed(7));
     rolls.forEach((val, i) => {
         state[val] = state[val] + 1;
-        console.log(getOdds(l, state)[0]);
+        console.log(getOdds(l, state)[0].toFixed(7));
     });
 }
 
