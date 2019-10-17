@@ -5,7 +5,7 @@ let size = 5
 
 guard let _input1 = readLine() else { fatalError("Could not read input") }
 let input1 = Array(_input1)
-puzzle = Puzzle()
+var puzzle = Puzzle()
 for row in 0..<size {
     var rowArray = [Int]()
     for column in 0..<size {
@@ -26,7 +26,6 @@ for row in 0..<size {
     let start = size * (size - 1) + (row * (size - 1))
     verticalContraints.append(Array(input2[start..<(start + size - 1)]))
 }
-var 
 
 func predicate(for constraint: Character) -> (Int, Int) -> Bool {
     switch constraint {
