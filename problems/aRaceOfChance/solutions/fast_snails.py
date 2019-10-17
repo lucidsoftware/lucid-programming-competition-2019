@@ -4,12 +4,10 @@ sys.setrecursionlimit(10000)
 
 @lru_cache(maxsize=None)
 def outcomes(positions):
-    return [
-      tuple(
-        p-1 if j == i else p
-        for j, p in enumerate(positions)
-      ) for i in range(len(positions))
-    ]
+  return [
+    tuple(positions[:i] + (positions[i] - 1,) + positions[i+1:])
+    for i in range(len(positions))
+  ]
 
 @lru_cache(maxsize=None)
 def p_victory(you, rest):
@@ -27,8 +25,8 @@ N, L = tuple(map(int, input().split()))
 rolls = list(map(int, input().split()))
 positions = [L]*N
 
-print("{:.4f}".format(p_victory(positions[0], tuple(sorted(positions[1:])))))
+print("{:.7f}".format(p_victory(positions[0], tuple(sorted(positions[1:])))))
 for roll in rolls:
   positions[roll] -= 1
-  print("{:.4f}".format(p_victory(positions[0], tuple(sorted(positions[1:])))))
+  print("{:.7f}".format(p_victory(positions[0], tuple(sorted(positions[1:])))))
 # sys.stderr.write("{}\n".format(p_victory.cache_info().misses))
