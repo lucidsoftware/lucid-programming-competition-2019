@@ -1,7 +1,7 @@
 # A Race of Chance
 At a family Halloween party, you notice your niece playing a simple game of chance with 2 of her friends. The 3 of them stand in a line 2 steps away from their make-shift finish line. Each child is assigned a number from 0-2. An adult rolls a 3-sided dice multiple times. After each roll of the dice, the child with the number that was rolled gets to take a step forward. The first child to cross the finish line wins.
 
-You see right away that this game takes no skill. However, you decide that it would be fun to figure out how likely your niece is to win after each roll of the dice.
+You see right away that this game takes no skill. However, you decide that it would be fun to figure out how likely your niece is to win after each roll of the dice, accounting for differing numbers of kids and various race lengths.
 
 ## Input/Output
 
@@ -11,13 +11,18 @@ You see right away that this game takes no skill. However, you decide that it wo
 
 `L` => the length of the race
 
-list of rolls => the rolls of the dice
+list of rolls (`R0`...`RX`) => the rolls of the dice
 
 **Format:**
 ```
 N L
-<space separated list of rolls>
+R0 R1 R2 ... RX
 ```
+
+**Constraints**
+* number of kids playing the game: 1 <= `N` <= 10
+* length of the race: 1 <= `L` <= 10
+* each roll of the dice: 0 <= `RX` < `N`
 
 ### Output
 The probability of your niece winning at each stage of the game. She will always be the child at position `0`.
@@ -32,41 +37,34 @@ The probability of your niece winning at each stage of the game. She will always
 ```
 For each probability:
 * represent it as a floating point number in the range [0, 1]
-* round it to 4 decimals
-* fill it to 4 decimals even if rounding is not necessary
-* include a leading 0 ahead of the `.` if it is less than `1.0000` (e.g., `0.2500`)
+* do not round any intermediate calculations or the values you print; HackRank will do a smart number comparison to make sure your answers are accurate within 4 decimal places
 
-**Note:** Do not round your intermediate results. Only round when printing your results.
-
-## Constraints
-* `N` will be a positive integer in the range [1, 6].
-* `L` will be a positive integer in the range [1, 10].
-* Each roll will be a positive integer in the range [0, N)
 
 ## Examples
-#### Input 0
-```
-3 2
-1 0 2 1
-```
-#### Output 0
-```
-0.3333
-0.1852
-0.4444
-0.3333
-0.0000
-```
-#### Input 1
-```
-2 2
-0 1 0
-```
-#### Output 1
-```
-0.5000
-0.7500
-0.5000
-1.0000
-```
 
+<table>
+    <tr>
+        <th>Input 0</th>
+        <th>Input 1</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>3 2<br>1 0 2 1</pre>
+        </td>
+        <td>
+            <pre>2 2<br>0 1 0</pre>
+        </td>
+    </tr>
+    <tr>
+        <th>Output 0</th>
+        <th>Output 1</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>0.333333<br>0.185185<br>0.444444<br>0.333333<br>0</pre>
+        </td>
+        <td>
+            <pre>0.5<br>0.75<br>0.5<br>1</pre>
+        </td>
+    </tr>
+</table>

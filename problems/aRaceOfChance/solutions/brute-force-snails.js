@@ -24,7 +24,6 @@ function getOdds(n, l, state) {
             const chances = Math.pow((1 / n), totalRolls - prevRolls);
             odds[winner] = odds[winner] + chances;
         } else {
-
             for (let i = 0; i < n; i++) {
                 const next = curr.slice();
                 next[i] = next[i] + 1;
