@@ -19,34 +19,65 @@ In addition, the rune stone **Q** rune stones counter-clockwise from the _curren
 The rune stone located immediately clockwise of the rune stone that was removed becomes the new _current_ rune stone.
 
 Once all **P** rune stones have been placed, the ritual circle should be ready.
-To verify the circle was prepared corrctly, your program should calculate the sum of the numbers on all of the rune stones that were placed into the center of the circle.
+To verify the circle was prepared corrctly, your program should calculate **S**, the sum of the numbers on all of the rune stones that were placed into the center of the circle.
 
-## Input
+## Input Format
 
 A single line containing 4 integers, each separated by a single space.
 <pre>P K M Q</pre>
 
-## Output
-
-A single integer, the sum of the numbers on rune stones in the center of the circle.
-<pre>S</pre>
-
 ## Constraints
 
-1 ≤ P < 2<sup>16</sup>
+1 ≤ **P** < 2<sup>16</sup>
 <br/>
-0 ≤ K < 2<sup>5</sup>
+0 ≤ **K** < 2<sup>5</sup>
 <br/>
-2 ≤ M < 2<sup>5</sup>
+2 ≤ **M** < 2<sup>5</sup>
 <br/>
-0 ≤ Q < 2<sup>5</sup>
+0 ≤ **Q** < 2<sup>5</sup>
 <br/>
-0 ≤ S < 2<sup>32</sup>
+0 ≤ **S** < 2<sup>32</sup>
 
-## Examples
+## Output Format
 
-For example, here is a walkthrough of creating a summoning circle where **P=16**, **K=1**, **M=7**, **Q=3**.
-The current sum **S** is shown as we add more rune stones, and the _current_ rune stone is in parentheses.
+A single integer **S**, the sum of the numbers on rune stones in the center of the circle.
+
+## Samples
+<!-- This section should only be in the pdf -->
+
+<table>
+  <th>
+    <td>Sample 0</td>
+    <td>Sample 1</td>
+    <td>Sample 2</td>
+  </th>
+  <tr>
+    <td>Input</td>
+    <td><pre>16 1 7 3</pre></td>
+    <td><pre>15 2 4 2</pre></td>
+    <td><pre>32768 1 23 7</pre></td>
+  </tr>
+  <tr>
+    <td>Output</td>
+    <td><pre>27</pre></td>
+    <td><pre>31</pre></td>
+    <td><pre>30600806</pre></td>
+  </tr>
+</table>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### Summoning Circle Walkthroughs
+
+Here is a walkthrough for Sample 0 where **P=16**, **K=1**, **M=7**, **Q=3**.
+The sum **S** is shown as we add more rune stones, and the _current_ rune stone is in parentheses.
 You'll just have to imagine them in a circle.
 
 <pre>[ 1] S= 0 :   0 ( 1)
@@ -65,7 +96,8 @@ You'll just have to imagine them in a circle.
 [14] S=27 :   0  11 (12)  5  13   1   8   6   9   3  10
 [15] S=27 :   0  11  12   5 (15) 13   1   8   6   9   3  10</pre>
 
-And here is another where **P=15**, **K=2**, **M=4**, **Q=2**.
+
+And here is another walkthrough for Sample 1 where **P=15**, **K=2**, **M=4**, **Q=2**.
 <pre>[ 1] S= 0 :   0 ( 1)
 [ 2] S= 0 :   0   1 ( 2)
 [ 3] S= 0 :   0   1 ( 3)  2
