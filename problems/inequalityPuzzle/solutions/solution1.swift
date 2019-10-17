@@ -2,31 +2,31 @@ typealias Puzzle = [[Int]]
 
 let size = 5
 
+
 guard let _input1 = readLine() else { fatalError("Could not read input") }
 let input1 = Array(_input1)
-var lateralConstraints = [[Character]]()
-for row in 0..<size {
-    let start = (row * (size - 1))
-    lateralConstraints.append(Array(input1[start..<(start + size - 1)]))
-}
-var verticalContraints = [[Character]]()
-for row in 0..<size {
-    let start = size * (size - 1) + (row * (size - 1))
-    verticalContraints.append(Array(input1[start..<(start + size - 1)]))
-}
-
-guard let _input2 = readLine() else { fatalError("Could not read input") }
-let input2 = Array(_input2)
-
-var puzzle = Puzzle()
+puzzle = Puzzle()
 for row in 0..<size {
     var rowArray = [Int]()
     for column in 0..<size {
-        let number = Int(String(input2[(row * size) + column]))!
+        let number = Int(String(input1[(row * size) + column]))!
         rowArray.append(number)
     }
     puzzle.append(rowArray)
 }
+guard let _input2 = readLine() else { fatalError("Could not read input") }
+let input2 = Array(_input2)
+var lateralConstraints = [[Character]]()
+for row in 0..<size {
+    let start = (row * (size - 1))
+    lateralConstraints.append(Array(input2[start..<(start + size - 1)]))
+}
+var verticalContraints = [[Character]]()
+for row in 0..<size {
+    let start = size * (size - 1) + (row * (size - 1))
+    verticalContraints.append(Array(input2[start..<(start + size - 1)]))
+}
+var 
 
 func predicate(for constraint: Character) -> (Int, Int) -> Bool {
     switch constraint {

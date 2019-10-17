@@ -30,3 +30,13 @@ The output should be given as a string of 25 characters. Order them beginning wi
 
 > The example input and output are for the puzzle in the figures above.
 
+## Examples
+#### Input 0
+```
+0000404010000000000000000
+|<|>|||||<|||||||||||<|<|||||||||||<>|<|
+```
+#### Output 0
+```
+3125424513523411342545132
+```
