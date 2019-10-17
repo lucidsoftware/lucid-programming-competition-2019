@@ -1,0 +1,2 @@
+#!/bin/sh
+exec swift $(dirname $0)/solution1.swift
