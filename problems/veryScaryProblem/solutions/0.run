@@ -1,2 +1,3 @@
 #!/bin/sh
 exec swift $(dirname $0)/solution1.swift
+# exec node $(dirname $0)/kevins-solution.js
