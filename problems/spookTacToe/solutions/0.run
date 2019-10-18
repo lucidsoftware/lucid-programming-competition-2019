@@ -1,2 +1,2 @@
 #!/bin/sh
-exec node "$(dirname $0)/bfs.js"
+exec node "$(dirname $0)/typescript/bfs.js"

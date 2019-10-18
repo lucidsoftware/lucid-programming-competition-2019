@@ -28,30 +28,26 @@ Output `h` lines of `w` characters that represents the solved puzzle.
 
 ## Constraints
 ```
-3 <= w <= 20000
-3 <= h <= 20000
-w * h <= 3000000
+3 <= w < 20000
+3 <= h < 20000
+w * h < 3000000
 ```
-
 ## Examples
-#### Input 0
-```
-3 3
+
+<table>
+    <tr>
+        <th>Input 1</th>
+        <th>Input 2</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>3 3
 xxo
 .x.
-...
-```
-#### Output 0
-```
-xxo
-oxx
-xoo
-```
-<br />
-
-#### Input 1
-```
-9 9
+...</pre>
+        </td>
+        <td>
+            <pre>9 9
 .........
 .o.......
 .#.......
@@ -60,12 +56,21 @@ x#.......
 ##......#
 ...#....x
 o#o...#..
-.o##..x#.
-```
-
-#### Output 1
-```
-oxoxoxoxo
+.o##..x#.</pre>
+        </td>
+    </tr>
+    <tr>
+        <th>Output 1</th>
+        <th>Output 2</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>xxo
+oxx
+xoo</pre>
+        </td>
+        <td>
+            <pre>oxoxoxoxo
 xooxoxoxo
 x#xoxoxox
 #oxoxoxox
@@ -73,5 +78,7 @@ x#oxoxoxo
 ##oxoxox#
 oxx#xoxox
 o#ooxo#ox
-xo##oxx#o
-```
+xo##oxx#o</pre>
+        </td>
+    </tr>
+</table>
