@@ -18,24 +18,6 @@ Both friends and candy will be positive integers.
 Output the amount of candy remaining if there is candy leftover, or the string "Not enough candy." if there is not.
 
 ## Examples
-#### Input 1
-```
-Friends: 3
-Candy: 7
-```
-#### Output 1
-```
-3
-```
-#### Input 2
-```
-Friends: 5
-Candy: 2
-```
-#### Output 2
-```
-Not enough candy.
-```
 <table>
     <tr>
         <th>Input 1</th>
