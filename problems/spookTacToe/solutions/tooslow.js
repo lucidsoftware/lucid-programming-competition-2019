@@ -44,7 +44,7 @@ function solveProblem(data) {
     return (!(is(b, x-1, y, p) && is(b, x+1, y, p))) && 
     (!(is(b, x, y-1, p) && is(b, x, y+1, p))) && 
     (!(is(b, x, y-2, p) && is(b, x, y-1, p))) && 
-    (!(is(b, x, y+1, p) && is(b, x, y+1, p))) && 
+    (!(is(b, x, y+2, p) && is(b, x, y+1, p))) && 
     (!(is(b, x-1, y, p) && is(b, x-2, y, p))) && 
     (!(is(b, x+1, y, p) && is(b, x+2, y, p))) && 
     (!(is(b, x+1, y+1, p) && is(b, x-1, y-1, p))) &&
