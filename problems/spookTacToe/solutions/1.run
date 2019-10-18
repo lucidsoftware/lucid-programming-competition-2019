@@ -1,0 +1,2 @@
+#!/bin/bash
+$(dirname $0)/rust/target/release/spook_tac_toe
