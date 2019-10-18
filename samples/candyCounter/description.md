@@ -9,6 +9,11 @@ Candy: <number>
 ```
 Both friends and candy will be positive integers.
 
+## Constraints
+* Friends and candy are both positive integers.
+* 0 < Friends < 10^5
+* 0 < Candy < 10^5
+
 ## Output
 Output the amount of candy remaining if there is candy leftover, or the string "Not enough candy." if there is not.
 
@@ -31,3 +36,31 @@ Candy: 2
 ```
 Not enough candy.
 ```
+<table>
+    <tr>
+        <th>Input 1</th>
+        <th>Input 2</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>Friends: 3
+Candy: 7</pre>
+        </td>
+        <td>
+            <pre>Friends: 5
+Candy: 2</pre>
+        </td>
+    </tr>
+    <tr>
+        <th>Output 1</th>
+        <th>Output 2</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>3</pre>
+        </td>
+        <td>
+            <pre>Not enough candy.</pre>
+        </td>
+    </tr>
+</table>
