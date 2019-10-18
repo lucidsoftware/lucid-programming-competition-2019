@@ -137,15 +137,13 @@ function solve(lines) {
                 map[idx] = deductions[0];
                 nextToSearch["delete"](idx); // delete it if it already got re-added by something else.
                 point.getValidSiblings().forEach(function (p) {
-                    Point.fromLinear(p).getValidSiblings().forEach(function (ip) {
-                        if (map[ip] === Item.Empty) {
-                            nextToSearch.add(ip);
-                        }
-                    });
+                    if (map[p] === Item.Empty) {
+                        nextToSearch.add(p);
+                    }
                 });
             }
             else {
-                // nextToSearch.add(idx);
+                nextToSearch.add(idx);
             }
         });
         if (!usefulLoop) {

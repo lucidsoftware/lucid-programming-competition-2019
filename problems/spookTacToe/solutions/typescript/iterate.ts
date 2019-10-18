@@ -146,14 +146,12 @@ function solve(lines: string[]): string {
                 map[idx] = deductions[0];
                 nextToSearch.delete(idx); // delete it if it already got re-added by something else.
                 point.getValidSiblings().forEach(p => {
-                    Point.fromLinear(p).getValidSiblings().forEach((ip) => {
-                        if (map[ip] === Item.Empty) {
-                            nextToSearch.add(ip);
-                        }
-                    })
+                    if (map[p] === Item.Empty) {
+                        nextToSearch.add(p);
+                    }
                 });
             } else {
-                // nextToSearch.add(idx);
+                nextToSearch.add(idx);
             }
         });
 

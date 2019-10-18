@@ -28,9 +28,9 @@ Output `h` lines of `w` characters that represents the solved puzzle.
 
 ## Constraints
 ```
-3 <= w < 20000
-3 <= h < 20000
-w * h < 3000000
+3 <= w < 1000
+3 <= h < 1000
+w * h < 30000
 ```
 ## Examples
 
