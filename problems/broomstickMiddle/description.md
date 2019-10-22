@@ -24,38 +24,56 @@ Your input consists of a sequence of numbers, one per line, each representing th
 <perfect_broomstick_length>
 ```
 ## Constraints
-* The length of the broomstick will always be a positive, non-zero integer strictly less than 2^31.
+* It will always be true that `0 < broomstick_length < 2,147,483,648`.
 * Broomsticks being added to the collection may be the same length as other broomsticks already present in the school's collection.
 * For the purposes of this problem, there is no particular unit of measure for the broomstick lengths, but you may assume that all lengths given are in the same unit of measure (no trickery with conversions required).
+
 ## Examples
-#### Input 0
-```
+<table>
+    <tr>
+        <th width="50%">Input 1</th>
+        <th>Input 2</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>
 2
 4
 13
 5
 9
-```
-#### Output 0
-```
+</pre>
+        </td>
+        <td>
+            <pre>
+52
+64
+78
+28
+</pre>
+        </td>
+    </tr>
+    <tr>
+        <th>Output 1</th>
+        <th>Output 2</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>
 2
 4
 4
 5
 5
-```
-#### Input 1
-```
-52
-64
-78
-28
-```
-#### Output 1
-```
+</pre>
+        </td>
+        <td>
+            <pre>
 52
 64
 64
 64
-```
-
+            </pre>
+        </td>
+    </tr>
+</table>
