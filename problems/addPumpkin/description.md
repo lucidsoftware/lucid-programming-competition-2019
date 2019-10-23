@@ -1,28 +1,30 @@
-# Add Pumpkin
+# Pumpkins and Witches
 
-When two pumpkin meet, they combined to a pumpkin, when a pumpkin meet a witch, witch eat the pumpkin. But when two witch meet each other, one witch make the other witch to become a pumpkin.\
-Lets say pumpkin as P, Witch as W.\
+When two pumpkins meet, they merge into a single pumpkin. When a pumpkin meets a witch, the witch eats the pumpkin, leaving only the witch. But when two witches meet each other, one witch turns the other witch into a pumpkin, leaving behind a witch and a pumpkin.\
+Let's abbreviate pumpkins as P and witches as W. Then we have:\
 \
 P + P = P\
 W + P = W\
 P + W = W\
 W + W = WP\
 \
-When we have two list of pumpkins and witches, we need to add them together based on the roles, It will be looks like adding two numbers start from the right side.
+Your job is to combine two groups of pumpkins and witches. The two groups will be lined up pair-wise and combined starting at the right side of the groups. When two witches combine, the remaining witch shifts one position to the left, and the pumpkin stays at the original position.
 
-Create a program that when given two list of pumpkins and witches, returns the result of add them together.
+Create a program that when given two lists of pumpkins and witches, it returns the result of combining them.
 
 ## Input
 
-Two pumpkin and witch strings, separated by space.
+Two pumpkin-and-witch strings, separated by a new line.
 
 ## Output
 
-The sum result of giving input.
+A single pumpkin-and-witch string representing the combination of the two inputs.
 
 ## Constraints
 
-The input strings are both non-empty and contains only characters P or W.
+The input strings contain only `P` and `W` characters.
+
+Let `N` be the length of an input string. 1 <= `N` <= 1000
 
 ## Examples
 
@@ -34,12 +36,14 @@ The input strings are both non-empty and contains only characters P or W.
     <tr>
         <td>
             <pre>
-WW W
+WW
+ W
             </pre>
         </td>
         <td>
             <pre>
-WPWP WPWW
+WPWP
+WPWW
             </pre>
         </td>
     </tr>
