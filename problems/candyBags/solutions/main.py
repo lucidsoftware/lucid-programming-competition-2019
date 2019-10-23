@@ -1,8 +1,6 @@
 import sys
 
 def candy_bags(bag_sizes, N):
-    print(bag_sizes)
-    print(N)
     m = [[0 for x in range(N + 1)] for y in range(len(bag_sizes) + 1)]
     for i in range(N + 1):
         m[0][i] = sys.maxsize
