@@ -54,7 +54,11 @@ impl PerfectBroomstickPile {
         if self.is_equally_balanced() {
             self.right.peek().map(|length| -length)
         } else {
-            self.left.peek().map(|x| *x)
+            if self.is_left_biggest() {
+                self.left.peek().map(|x| *x)
+            } else {
+                self.right.peek().map(|x| -*x)
+            }
         }
     }
 
