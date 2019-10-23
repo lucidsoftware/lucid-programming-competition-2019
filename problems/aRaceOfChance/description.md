@@ -11,18 +11,19 @@ You see right away that this game takes no skill. However, you decide that it wo
 
 `L` => the length of the race
 
-list of rolls (`R0`...`RX`) => the rolls of the dice
+list of rolls (`R1`...`RX`) => the rolls of the dice until someone crosses the finish line
 
 **Format:**
 ```
 N L
-R0 R1 R2 ... RX
+R1 R2 ... RX
 ```
 
 **Constraints**
 * number of kids playing the game: 1 <= `N` <= 10
 * length of the race: 1 <= `L` <= 10
-* each roll of the dice: 0 <= `RX` < `N`
+* each roll of the dice: 0 <= `Rx` < `N`
+* number of rolls until someone wins: 1 <= `X` <= (`N` * (`L` - 1)) + 1
 
 ### Output
 The probability of your niece winning at each stage of the game. She will always be the child at position `0`.
