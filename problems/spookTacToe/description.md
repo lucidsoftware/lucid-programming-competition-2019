@@ -27,11 +27,10 @@ The characters represent:<br />
 Output `h` lines of `w` characters that represents the solved puzzle.
 
 ## Constraints
-```
-3 <= w < 1000
-3 <= h < 1000
-w * h < 30000
-```
+- 3 <= `w` < 1000
+- 3 <= `h` < 1000
+- `w` * `h` < 30000
+
 ## Examples
 
 <table>

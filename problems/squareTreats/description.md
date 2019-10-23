@@ -5,11 +5,12 @@ Do not round up to reach your 99% - you have to make squares that take _at least
 
 ## Input
 Your input will come in the form `<width>x<height>`.
-`width` and `height` will both be positive numbers.
 
 ## Constraints
-* 0 < width < 10^8
-* 0 < height < 10^8
+
+- `width` and `height` are **not** guaranteed to be integers
+- 0 < `width` < 10^8
+- 0 < `height` < 10^8
 
 ## Output
 You must output a single number, which is the number of squares needed.

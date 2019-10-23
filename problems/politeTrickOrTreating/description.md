@@ -9,9 +9,9 @@ You came prepared with a small scale such that at every house you can weigh each
 You will receive a list containing the the integer weight of the treat in grams and the name of the treat in the following form:
 
 ```
-<treat> <weight>
+<weight> <treat>
 ...
-<treat> <weight>
+<weight> <treat>
 ```
 
 ## Output
@@ -23,8 +23,8 @@ Output the name of the treat that has the second heaviest weight.
 - Treats may have spaces, numbers, or special characters in their names.
 - Treats are guaranteed to have unique names and unique weights from all other treats.
 - There will always be at least two (2) treats in the list of treats given to you.
-- Given the weight of a treat _W_, -1,000,000 <= W <= 1,000,000
-- Give the number of lines of input _L_, 2 <= L < 4,000,000
+- Given the weight of a treat `W`, -1,000,000 <= `W` <= 1,000,000
+- Give the number of lines of input `L`, 2 <= `L` < 4,000,000
 
 ## Examples
 
