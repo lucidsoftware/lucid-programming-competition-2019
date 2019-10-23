@@ -3,7 +3,7 @@ process.stdin.on('data', d => chunks.push(d));
 process.stdin.on('end', () => {
     const data = chunks.join('');
     console.log(
-        data.split(' ')
+        data.split('\n')
         .map((str) =>
             parseInt(
                 str.replace(/W/g, '1').replace(/P/g, '0'),
