@@ -1,4 +1,4 @@
-# Candy Bags
+# Monster Maker
 
 ## Description
 You decide to play the villain this halloween and take over parts of your city with the help of your army of monsters. Despite being the mad scientist that you are, you decide that you would still like to be as efficient as possible in the process.
