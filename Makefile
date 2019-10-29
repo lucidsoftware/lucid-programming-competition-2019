@@ -52,7 +52,7 @@ scoreboard/.npm-install:
 	> $@
 
 scoreboard/.tsc-compile: scoreboard/.npm-install $(wildcard scoreboard/*.ts)
-	$(@D)/node_modules/.bin/tsc -p $(@D)
+	$(@D)/node_modules/.bin/tsc --downlevelIteration -p $(@D)
 	> $@
 
 scoreboard.zip: $(shell find scoreboard) scoreboard/.npm-install scoreboard/.tsc-compile

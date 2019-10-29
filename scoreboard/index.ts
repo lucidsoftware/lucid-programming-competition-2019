@@ -1,4 +1,5 @@
-import * as scoreboard from './scoreboard';
+import * as leaderboard from './scoreboard';
+import * as balloonQueue from './balloonQueue';
 
 exports.handler = async (event, context, callback) => {
 
@@ -7,7 +8,7 @@ exports.handler = async (event, context, callback) => {
             "isBase64Encoded": false,
             "statusCode": 200,
             "headers": { 'content-type': 'text/html'},
-            "body": await scoreboard.leaderboard((event && event.queryStringParameters && event.queryStringParameters.school) || '')
+            "body": await leaderboard.getHtml((event && event.queryStringParameters && event.queryStringParameters.school) || '')
         });
     } catch(e) {
         callback(e);
@@ -20,7 +21,7 @@ exports.queue = async (event, context, callback) => {
             "isBase64Encoded": false,
             "statusCode": 200,
             "headers": { 'content-type': 'text/html'},
-            "body": await scoreboard.getBaloonQueue((event && event.queryStringParameters && event.queryStringParameters.school) || '')
+            "body": await balloonQueue.getHtml((event && event.queryStringParameters && event.queryStringParameters.school) || '')
         });
     } catch(e) {
         callback(e);
