@@ -1,26 +1,45 @@
+# Welcome!
+
+Welcome to the 2019 Lucid Programming Competition! This packet has everything you need to know...so grab some breakfast, find your team, and read through this packet together.
+
 # Instructions
 
-## Sign up
+### **IMPORTANT: Your team must complete all of the following steps in order to compete and be eligible to win!**
 
-1. Go to [https://www.hackerrank.com/auth/signup/lucid-2019-cu](https://www.hackerrank.com/auth/signup/lucid-2019-cu) and create a HackerRank account for your team. The name should be your team name, as you want it to appear on the leaderboard.
-1. Optionally, you may change your username at [https://www.hackerrank.com/settings/account](https://www.hackerrank.com/settings/account).
+### **Step 1:** Log in to hackerrank.com
 
-## Practice
+You only need **one HackerRank account** for your team. You may use an existing account or create a new account for today's competition. To create a new account, go to hackerrank.com/auth/signup
 
-Go to [https://www.hackerrank.com/lucid-2018-practice](https://www.hackerrank.com/lucid-2018-practice), and solve the attached practice problem.
+### **Step 2:** Configure account info
 
-## Compete
+Regardless of whether you are using a new or existing HackerRank account, you must configure your account as follows in order to compete:
 
-The competition will be available at  [https://www.hackerrank.com/lucid-2019-cu](https://www.hackerrank.com/lucid-2019-cu).
+-   Navigate to your HackerRank account profile (top right corner)
+-   Click to edit the "About" section
+-   In the "About Me" section, enter your location, team number, and team name in the following format. _If you're using an existing account_ and already have content in the "About Me" section, simply put these 3 lines first...you can keep your existing content below these lines.
+      <pre>
+      School (BYU, UofU, or USU)
+      Team number (you received with your packet)
+      Team name (any appropriate name you wish to identify yourselves as)</pre>
+    EXAMPLE:
+      <pre>
+      BYU
+      17
+      Pro Graham Crackers</pre>
+-   Click "Save"
 
-At the start of the competition, you will also receive a hard copy of the problems.
+### **Step 3:** Sign up for today's competition
 
-The leaderboard will be available at  [https://contest.golucid.co/](https://contest.golucid.co/). It will be publicly frozen one hour prior to the end of the contest.
+-   Navigate to https://www.hackerrank.com/lpc-2019
+-   Click "Sign Up"
 
-## Additional info
+### **Step 4:** Complete practice problems (optional, highly recommended)
 
-Input may or may not end with a trailing new line. Extra whitespace is ignored in output. Sometimes a certain numerical accuracy is required of output; in these cases you may print the answer with any number of digits, as long as it is within the requisite range.
+Understanding how input and output works in HackerRank is key to writing and running solutions for the competition. That's why we've created two practice problems for you. To solve these practice problems, navigate to [https://www.hackerrank.com/lpc-2019-practice](https://www.hackerrank.com/lpc-2019-practice).
 
-Before submitting, it is recommended that you run your code against the samples. HackerRank shows you stdout and stderr when running in this manner.
+Please note that these problems do NOT count towards the competition.
 
-This contest is sponsored by Lucid Software ([https://golucid.co/](https://golucid.co/)).
+<br>
+<br>
+
+This contest is sponsored by Lucid Software https://golucid.co/.

@@ -43,8 +43,8 @@ PDF_OPTIONS := -g -B 15mm -L 20mm -R 20mm -T 20mm -s Letter --print-media-type
 problems.pdf: $(PROBLEM_DESCRIPTIONS_HTML) $(shell find problems -name '*.png' -o -name '*.svg')
 	wkhtmltopdf $(PDF_OPTIONS) $(sort $(PROBLEM_DESCRIPTIONS_HTML)) $@
 
-instructions.pdf: instructions.html rules.html $(SAMPLE_DESCRIPTIONS_HTML) $(shell find samples -name '*.png')
-	wkhtmltopdf $(PDF_OPTIONS) instructions.html rules.html $(sort $(SAMPLE_DESCRIPTIONS_HTML)) $@
+instructions.pdf: instructions.html rules.html schedule.html details.html $(SAMPLE_DESCRIPTIONS_HTML) $(shell find samples -name '*.png')
+	wkhtmltopdf $(PDF_OPTIONS) instructions.html rules.html schedule.html details.html $(sort $(SAMPLE_DESCRIPTIONS_HTML)) $@
 
 scoreboard/.npm-install:
 	rm -rf $(@D)/node_modules
