@@ -11,5 +11,5 @@
 .tsc-compile
 tests.zip
 node_modules/
-scoreboard/*.js
+leaderboard/*.js
 .DS_Store

@@ -1,5 +1,5 @@
 {
-    "name": "scoreboard",
+    "name": "leaderboard",
     "version": "0.0.0",
     "dependencies": {
         "@types/escape-html": "0.0.20",

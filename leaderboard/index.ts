@@ -1,4 +1,4 @@
-import * as leaderboard from './scoreboard';
+import * as leaderboard from './leaderboard';
 import * as balloonQueue from './balloonQueue';
 
 exports.handler = async (event, context, callback) => {

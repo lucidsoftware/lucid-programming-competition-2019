@@ -46,26 +46,26 @@ problems.pdf: $(PROBLEM_DESCRIPTIONS_HTML) $(shell find problems -name '*.png' -
 instructions.pdf: instructions.html rules.html schedule.html details.html $(SAMPLE_DESCRIPTIONS_HTML) $(shell find samples -name '*.png')
 	wkhtmltopdf $(PDF_OPTIONS) instructions.html rules.html schedule.html details.html $(sort $(SAMPLE_DESCRIPTIONS_HTML)) $@
 
-scoreboard/.npm-install:
+leaderboard/.npm-install:
 	rm -rf $(@D)/node_modules
 	cd $(@D) && yarn install
 	> $@
 
-scoreboard/.tsc-compile: scoreboard/.npm-install $(wildcard scoreboard/*.ts)
+leaderboard/.tsc-compile: leaderboard/.npm-install $(wildcard leaderboard/*.ts)
 	$(@D)/node_modules/.bin/tsc --downlevelIteration -p $(@D)
 	> $@
 
-scoreboard.zip: $(shell find scoreboard) scoreboard/.npm-install scoreboard/.tsc-compile
+leaderboard.zip: $(shell find leaderboard) leaderboard/.npm-install leaderboard/.tsc-compile
 	rm -f $@
-	cd scoreboard && zip -qr ../scoreboard node_modules *.js
+	cd leaderboard && zip -qr ../leaderboard node_modules *.js
 
 .PHONY: deploy
-deploy: deploy-scoreboard deploy-queue
+deploy: deploy-leaderboard deploy-queue
 
-.PHONY: deploy-scoreboard
-deploy-scoreboard: scoreboard.zip
+.PHONY: deploy-leaderboard
+deploy-leaderboard: leaderboard.zip
 	aws-staging --region us-west-1 lambda update-function-code --function-name competition-2017-leaderboard --zip-file fileb://$< --publish
 
 .PHONY: deploy-queue
-deploy-queue: scoreboard.zip
+deploy-queue: leaderboard.zip
 	aws-staging --region us-west-1 lambda update-function-code --function-name competition-2017-queue --zip-file fileb://$< --publish
