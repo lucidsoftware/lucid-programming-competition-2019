@@ -1,6 +1,5 @@
 import {
     Challenge,
-    FREEZE_SCOREBOARD_IN_FINAL_HOUR,
     getChallenges,
     getProfile,
     getSanitizedSchoolFilter,

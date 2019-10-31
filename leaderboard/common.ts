@@ -13,7 +13,7 @@ const cookie = new tough.Cookie({
 const cookiejar = rp.jar();
 cookiejar.setCookie(cookie, 'https://www.hackerrank.com');
 
-export const FREEZE_SCOREBOARD_IN_FINAL_HOUR = false;
+export const FREEZE_LEADERBOARD_IN_FINAL_HOUR = true;
 export const CONTEST_SLUG = process.env['CONTEST_SLUG'];
 
 export const BATCH_SIZE = 100;
@@ -158,7 +158,7 @@ export function getSanitizedSchoolFilter(rawFilter: string|undefined): string {
 export function isSubmissionValid(submission: Submission, correctOnly: boolean): boolean {
     const isCorrect = submission.status == 'Accepted';
     const inBounds = submission.inContestBounds;
-    const duringFinalHour = FREEZE_SCOREBOARD_IN_FINAL_HOUR && submission.timeFromStart > 3*60;
+    const duringFinalHour = FREEZE_LEADERBOARD_IN_FINAL_HOUR && submission.timeFromStart > 3*60;
     return (!correctOnly || isCorrect) && inBounds && !duringFinalHour;
 }
 
