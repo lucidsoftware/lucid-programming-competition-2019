@@ -94,22 +94,22 @@ export async function getChallenges(): Promise<Challenge[]> {
 }
 
 export async function getProfile(username: Username): Promise<Profile> {
-  const USER_URL_BASE =
-      'https://www.hackerrank.com/rest/contests/master/hackers/';
-  const rawProfile = (await rp({
-                       method: 'GET',
-                       uri: USER_URL_BASE + username,
-                       jar: cookiejar,
-                       json: true,
-                     })).model;
-  const bioLines = (rawProfile.short_bio || '').split('\n');
+    const USER_URL_BASE =
+        'https://www.hackerrank.com/rest/contests/master/hackers/';
+    const rawProfile = (await rp({
+        method: 'GET',
+        uri: USER_URL_BASE + username,
+        jar: cookiejar,
+        json: true,
+    })).model;
+    const bioLines = (rawProfile.short_bio || '').split('\n');
 
-  return {
-    username: escape(rawProfile.username),
-    school: escape(bioLines[0] || '').toLocaleLowerCase(),
-    teamNumber: +(bioLines[1] || '') || 0,
-    teamName: escape(bioLines[2] || ''),
-  };
+    return {
+        username: escape(rawProfile.username),
+        school: escape(bioLines[0] || '').toLocaleLowerCase(),
+        teamNumber: +(bioLines[1] || '') || 0,
+        teamName: escape(bioLines[2] || ''),
+};
 }
 
 export async function getSubmissions(): Promise<Submission[]> {
