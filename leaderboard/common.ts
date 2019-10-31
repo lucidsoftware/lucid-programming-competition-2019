@@ -14,13 +14,12 @@ const cookiejar = rp.jar();
 cookiejar.setCookie(cookie, 'https://www.hackerrank.com');
 
 export const FREEZE_SCOREBOARD_IN_FINAL_HOUR = false;
-export const CONTEST_NAME = 'lucid-2019-cu';
+export const CONTEST_SLUG = process.env['CONTEST_SLUG'];
 
 export const BATCH_SIZE = 100;
-export const PUBLIC_CONTEST_URL =
-    `https://www.hackerrank.com/contests/${CONTEST_NAME}`;
+export const PUBLIC_CONTEST_URL = `https://www.hackerrank.com/contests/${CONTEST_SLUG}`;
 export const PUBLIC_CHALLENGES_URL = PUBLIC_CONTEST_URL + `/challenges/`;
-export const REST_URL = `https://www.hackerrank.com/rest/contests/${CONTEST_NAME}`;
+export const REST_URL = `https://www.hackerrank.com/rest/contests/${CONTEST_SLUG}`;
 
 export const schoolNameMap = {
   'byu': 'BYU',
