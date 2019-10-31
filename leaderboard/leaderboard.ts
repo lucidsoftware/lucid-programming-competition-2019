@@ -17,7 +17,11 @@ import {
     Username,
 } from './common';
 
-const bioReminder = 'Update the "About" field to have the school you are competing at as the first line (CU), followed by the name of each person on your team on the next lines.<br><b>You must do this to be eligible for prizes</b>';
+const bioReminder = `Update the "About" section to have the following, separated by new lines:<br>
+- the school you are competing at (BYU, USU, Utah)<br>
+- the team number you were assigned<br>
+- your team name<br>
+<b>You must do this to be eligible for prizes</b>`;
 
 const leaderboardHtmlHeaderContent =
 `    <head>
@@ -132,18 +136,15 @@ function teamScoreToRow(challenges: Challenge[], score: TeamScore, profile: Prof
 
 function getNameCellContents(profile: Profile): string {
     const userUrl = `https://www.hackerrank.com/${profile.username}`;
-    const teamMemberNames = profile.teamMembers.join('<br>');
-    const needNames = profile.teamMembers.length === 0;
-    const nameTooltip = needNames ? bioReminder : 'Competitors:<br>' + teamMemberNames;
-    const nameCellClasses = `tooltip${needNames ? ' need-names' : ''}`;
+    const missingContent = profile.school.length == 0 || profile.teamNumber == 0 || profile.teamName.length == 0;
+    const tooltipContent = missingContent ? bioReminder : `Team number: ${profile.teamNumber}`;
+    const nameCellClasses = `tooltip${missingContent ? ' need-names' : ''}`;
 
     const nameCellContents = [
         `<a class="${nameCellClasses}" href="${userUrl}">`,
-        profile.teamName,
-        needNames ? '*' : '',
-        '<span class="tooltiptext">',
-        nameTooltip,
-        '</span>',
+        profile.teamName || profile.username, // fall back on username for malformed bios
+        missingContent ? '*' : '',
+        `<span class="tooltiptext">${tooltipContent}</span>`,
         '</a>',
     ].join('');
 
@@ -154,12 +155,12 @@ function getLocationCellContents(profile: Profile, schoolFilter?: string): strin
     const prettySchoolName = schoolNameMap[profile.school];
     if (!!prettySchoolName) {
         if (!schoolFilter) {
-            return `<a href="?school=${prettySchoolName}">${prettySchoolName}</a>`;
+            return `<a href='?school=${prettySchoolName}'>${prettySchoolName}</a>`;
         } else {
             return prettySchoolName;
         }
     } else {
-        return `<a class="tooltip" href="https://www.hackerrank.com/settings/bio">Set Location<span class="tooltiptext">${bioReminder}</span>`;
+        return `<a class="tooltip" href="https://www.hackerrank.com/settings/bio">Set Location<span class='tooltiptext'>${bioReminder}</span>`;
     }
 }
 

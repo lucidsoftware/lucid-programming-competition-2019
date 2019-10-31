@@ -105,7 +105,7 @@ export async function getHtml(schoolFilter:string = ''): Promise<string> {
 
         return [
             `    <tr class="item" id="${submission.id}" data-user="${submission.username}">`,
-            `        <td>${profile.teamName}</td>`,
+            `        <td>${profile.teamName || profile.username} (#${profile.teamNumber})</td>`,
             `        <td>${profile.school}</td>`,
             `        <td>${submission.challenge.name}</td>`,
             `        <td><input type="text"></td>`,

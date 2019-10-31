@@ -35,9 +35,9 @@ export type Username = string;
 
 export interface Profile {
   username: Username;
-  teamName: string;
   school: string;
-  teamMembers: string[];  // TODO remove when all done
+  teamNumber: number;
+  teamName: string;
 }
 
 export type Status = "Accepted" | "Compilation error" | "Runtime Error" | "Segmentation Fault" | "Terminated due to timeout" | "Wrong Answer";
@@ -107,9 +107,9 @@ export async function getProfile(username: Username): Promise<Profile> {
 
   return {
     username: escape(rawProfile.username),
-    teamName: escape(rawProfile.name),
-    school: escape(bioLines[0]).toLocaleLowerCase(),
-    teamMembers: bioLines.slice(1).map(escape),
+    school: escape(bioLines[0] || '').toLocaleLowerCase(),
+    teamNumber: +(bioLines[1] || '') || 0,
+    teamName: escape(bioLines[2] || ''),
   };
 }
 
