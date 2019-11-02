@@ -161,7 +161,7 @@ export async function leaderboard(schoolFilter?:string) {
     let abbreviations = {
         'byu': 'BYU',
         'usu': 'USU',
-        'utah': 'Utah',
+        'uofu': 'Utah',
         'osu': 'OSU',
         'cu': 'CU',
     };
