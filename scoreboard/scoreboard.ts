@@ -231,7 +231,7 @@ export async function leaderboard(schoolFilter?:string) {
     </style>
     </head>
     <body>
-
+    https://github.com/lucidsoftware/lucid-programming-competition-2019/pull/17
     <div class="container">
     <h1><a class="title" href="?">Lucid Programming Competition Leaderboard</a></h1>`
     let table = `<table class="bordered striped centered"><tbody>\n<thead><tr><th>Rank</th><th>Name</th><th>Location</th>`;
@@ -313,7 +313,7 @@ export async function getBaloonQueue(schoolFilter:string = '') {
 
     let schools = {
         'byu': true,
-        'utah': true,
+        'uofu': true,
         'usu': true,
         'osu': true,
         'cu': true,
