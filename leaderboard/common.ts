@@ -24,7 +24,7 @@ export const REST_URL = `https://www.hackerrank.com/rest/contests/${CONTEST_SLUG
 export const schoolNameMap = {
   'byu': 'BYU',
   'usu': 'USU',
-  'utah': 'Utah',
+  'uofu': 'UofU',
   'osu': 'OSU',
   'cu': 'CU',
 };

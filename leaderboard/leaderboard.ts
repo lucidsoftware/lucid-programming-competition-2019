@@ -17,7 +17,7 @@ import {
 } from './common';
 
 const bioReminder = `Update the "About" section to have the following, separated by new lines:<br>
-- the school you are competing at (BYU, USU, Utah)<br>
+- the school you are competing at (BYU, USU, UofU)<br>
 - the team number you were assigned<br>
 - your team name<br>
 <b>You must do this to be eligible for prizes</b>`;
